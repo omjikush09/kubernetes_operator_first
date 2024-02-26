@@ -1,0 +1,18 @@
+apiVersion: api.omjikushwaha.com/v1alpha1
+kind: Omji
+metadata:
+  labels:
+    app.kubernetes.io/name: omji
+    app.kubernetes.io/instance: omji-sample
+    app.kubernetes.io/part-of: operatorfirst
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: operatorfirst
+  name: omji-sample
+spec:
+  start: 5
+  end: 20
+  replicas: 5
+  deployments:
+    - name: nginx
+      namespace: default
+  # TODO(user): Add fields here
